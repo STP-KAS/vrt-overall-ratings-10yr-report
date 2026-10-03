@@ -69,7 +69,12 @@ for y, v, rep, basis in [(2016, 90.7, 2016, "15+"), (2017, 89.4, 2017, "15+"), (
         "text 'ten opzichte van 90,0% in 2022'" if y == 2022 else "infobox / KPI text", "also stated in VRT press release of 2 Jul 2026" if y == 2025 else "")
 add(2025, "VRT (all platforms)", "Weekly reach (totaalbereik)", 90.6, "% of Flemings", "", "VRT press release 2 Jul 2026", PR25, "primary", "section 'Groot bereik'")
 # --- time spent and live vs delayed ---
-for y, v, rep in [(2016, "1:54", 2016), (2017, "1:49", 2017), (2018, "1:49", 2018), (2019, "1:47", 2019)]:
+for y, v, rep in [(2015, 73.3, 2015), (2016, 73.7, 2016), (2017, 75.0, 2017), (2018, 73.1, 2018), (2019, 72.8, 2019), (2020, 73.2, 2020)]:
+    add(y, "All TV (Flanders)", "Share of Flemings (4+) watching TV on an average day (live and/or delayed)", v, "%", "4+ (CIM)", jv(rep), J[rep], jt(rep), "section 'Kijken naar televisie'")
+for y, v, rep in [(2015, "3:56", 2015), (2016, "3:54", 2016), (2017, "3:47", 2017), (2018, "3:44", 2018), (2019, "3:44", 2019)]:
+    add(y, "All TV (Flanders)", "Average daily viewing time per TV viewer (those who watched that day), live and delayed", v, "h:mm", "4+ (CIM)", jv(rep), J[rep], jt(rep), "section 'Kijken naar televisie'",
+        "per TV viewer, not per inhabitant")
+for y, v, rep in [(2015, "1:50", 2015), (2016, "1:54", 2016), (2017, "1:49", 2017), (2018, "1:49", 2018), (2019, "1:47", 2019)]:
     add(y, "VRT TV", "Average daily viewing time per Fleming (4+) on VRT channels incl. delayed", v, "h:mm", "4+", jv(rep), J[rep], jt(rep), "text 'Kijken naar VRT-televisie'")
 for y, v, rep in [(2017, 87.7, 2017), (2018, 86.1, 2018), (2019, 83.6, 2019), (2020, 81.5, 2020)]:
     add(y, "VRT TV", "Share of VRT TV viewing watched live (rest = delayed up to 7 days)", v, "%", "", jv(rep), J[rep], jt(rep), "text",
