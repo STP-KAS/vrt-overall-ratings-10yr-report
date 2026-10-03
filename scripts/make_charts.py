@@ -1,5 +1,13 @@
 """Draw the PNG charts in charts/ from the CSVs in data/ (needs pandas + matplotlib)."""
 import os, pandas as pd, matplotlib
+
+import matplotlib.transforms as mtrans
+def covid(a, x0=2019.5, x1=2021.5, ytext=0.985):
+    """Grey band for the COVID-19 years 2020-2021 (as in the Journaal report)."""
+    a.axvspan(x0, x1, color="grey", alpha=.08, zorder=0)
+    a.text((x0 + x1) / 2, ytext, "COVID-19 years", transform=mtrans.blended_transform_factory(a.transData, a.transAxes),
+           ha="center", va="top", fontsize=7.5, color="grey")
+
 matplotlib.use("Agg"); import matplotlib.pyplot as plt
 R = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."); D = os.path.join(R, "data"); C = os.path.join(R, "charts")
 os.makedirs(C, exist_ok=True)
@@ -32,6 +40,7 @@ ax.set_title("Flemish TV market share by broadcaster group, 2015-2025 (4+, full 
 ax.set_ylabel("% of total viewing time"); ax.set_xticks(range(2015, 2026)); ax.grid(alpha=.3); ax.legend(loc="lower left", fontsize=8)
 fig.text(0.01, 0.01, "Solid: own sum of CIM yearly channel shares (2018-25). Dashed: own sum of channel shares in VRT annual reports 2016/2017 (CIM/GfK; 2015 excl. CAZ).\n"
          "Group = channels grouped as by VRM (VRT / DPG Media / Play Media). Channel renames do not break group totals.", fontsize=7, color="dimgrey")
+for _a in fig.axes: covid(_a, ytext=0.5)
 fig.tight_layout(rect=(0, 0.06, 1, 1)); fig.savefig(os.path.join(C, "group_market_share.png"), dpi=130); plt.close(fig)
 
 # 2 VRT channels
@@ -52,6 +61,7 @@ breaks(ax, 37)
 ax.set_ylim(0, 38); ax.set_xticks(range(2015, 2026)); ax.grid(alpha=.3); ax.legend(loc="center left", fontsize=8)
 ax.set_title("VRT channels: TV market share, 2015-2025 (4+, full day)"); ax.set_ylabel("% of total viewing time")
 fig.text(0.01, 0.01, "Solid: CIM yearly market shares (2018-25). Dashed: VRT annual reports 2016 and 2017 (CIM/GfK, rounded to 0.1).", fontsize=7, color="dimgrey")
+for _a in fig.axes: covid(_a, ytext=0.6)
 fig.tight_layout(rect=(0, 0.04, 1, 1)); fig.savefig(os.path.join(C, "vrt_channel_shares.png"), dpi=130); plt.close(fig)
 
 # 3 reach
@@ -76,6 +86,7 @@ a2.plot(x, y, "-o", color="#9467bd", label="daily reach, all VRT"); [a2.annotate
 a2.axhline(85, color="grey", lw=.8, ls="--"); a2.set_ylim(60, 100); a2.set_xticks(range(2016, 2026)); a2.tick_params(axis="x", labelsize=7); a2.grid(alpha=.3); a2.legend(fontsize=8, loc="lower right")
 a2.set_title("VRT reach across TV, radio and online (% of Flemings)", fontsize=10)
 fig.text(0.01, 0.01, "Source: VRT annual reports 2015-2025 (VRT totaalbereik survey; CIM). Survey base 15+ until 2018, 12+ in 2022-2024 reports. Dashed line: 85% weekly-reach norm cited in the VRT 2017 report.", fontsize=7, color="dimgrey")
+for _a in fig.axes: covid(_a)
 fig.tight_layout(rect=(0, 0.04, 1, 1)); fig.savefig(os.path.join(C, "vrt_reach.png"), dpi=130); plt.close(fig)
 
 # 4 daily top 20
@@ -92,6 +103,7 @@ breaks(ax, 22); ax.legend(fontsize=7, loc="center left", bbox_to_anchor=(0, 0.47
 ax.set_title("Who fills the CIM daily Top 20? Own calculation, 2016-2026")
 ax.set_ylabel("%")
 fig.text(0.01, 0.01, "Own calculation from the CIM daily Top 20 (region North). *2016 = 1 Oct-31 Dec; 2026 = 1 Jan-1 Oct. Sum of viewers of all Top-20 entries per group / total.", fontsize=7, color="dimgrey")
+for _a in fig.axes: covid(_a)
 fig.tight_layout(rect=(0, 0.04, 1, 1)); fig.savefig(os.path.join(C, "daily_top20_group_share.png"), dpi=130); plt.close(fig)
 
 # 5 digital
@@ -106,8 +118,9 @@ a2.plot(x, y / 1e6, "-o", color="#1f5fbf", label="registered (VRT NU accounts to
 x2, y2 = series("VRT NU / VRT MAX", "Active VRT profiles at year end")
 a2.plot(x2, y2 / 1e6, "-o", color="#ff7f0e", label="active VRT profiles")
 for i, v in list(zip(x, y)) + list(zip(x2, y2)): a2.annotate(f"{v/1e6:.2f}", (i, v / 1e6), textcoords="offset points", xytext=(0, 6), ha="center", fontsize=7)
-a2.set_ylim(0, 5); a2.set_xticks(range(2018, 2026)); a2.grid(alpha=.3); a2.legend(fontsize=7, loc="upper left")
+a2.set_ylim(0, 5); a2.set_xticks(range(2018, 2026)); a2.grid(alpha=.3); a2.legend(fontsize=7, loc="lower right")
 a2.set_title("VRT NU / VRT MAX users at year end (millions)", fontsize=10)
 fig.text(0.01, 0.01, "Source: VRT annual reports 2018-2025. VRT NU was renamed VRT MAX in 2022. 2020 user count not found.", fontsize=7, color="dimgrey")
+for _a in fig.axes: covid(_a)
 fig.tight_layout(rect=(0, 0.04, 1, 1)); fig.savefig(os.path.join(C, "vrt_digital.png"), dpi=130); plt.close(fig)
 print("charts written")
