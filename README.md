@@ -25,6 +25,7 @@ Every number in this repository is either copied from a named source (with its U
 8. **Value basis of the daily figures (own check).** The same broadcast was looked up in the daily Top 20 and in CIM's yearly Top 100. Up to late June 2023 the daily value is typically about 10% lower (monthly averages 0.75–0.99 of the yearly-list value: same-day viewing). From early July 2023 it is about equal (0.97–1.01), and from 1 Jul 2024 exactly equal (consolidated with 7, later 28, days of delayed and online viewing). CIM's TV page confirms each programme is reported three times (Live+VOSDAL, Live+7, Live+28). The absolute series are therefore **split at 1 Jul 2023**, and 2023 is shown as two half years. Like-for-like comparisons only use months on the same basis.
 9. **Biggest audiences per year.** From the CIM yearly Top 100 (2018–2025): each group's biggest entry, with programme name, and the average of the year's 10 biggest entries on any channel.
 10. **Methodology breaks** are listed with sources in [`data/methodology_breaks.csv`](data/methodology_breaks.csv) and marked on the charts.
+11. **Funding and targets.** Public funding is the pillar-1 "Overheidsfinanciering" in the financing table of each VRT annual report, using the first-reported value. Real terms are an own calculation with the Eurostat HICP for Belgium (annual average). Management-contract targets and results are copied from the KPI sections of the annual reports and from the 2026–2030 contract. Reasons for the decline are taken only from sources that name or measure them (imec Digimeter, Digital News Report Flanders, VRT, CIM).
 
 ## Sources
 
@@ -34,7 +35,11 @@ Every number in this repository is either copied from a named source (with its U
 |---|---|
 | CIM, TV results: [cim.be/nl/televisie](https://www.cim.be/nl/televisie) (yearly market shares, yearly Top 100, daily Top 20, key figures; region North) | channel and group shares 2018–2025, top programmes 2018–2025, all daily Top-20 calculations (shares and absolute audiences), the statement that each programme is reported Live+VOSDAL, Live+7 and Live+28 |
 | CIM [TV regulations](https://www.cim.be/sites/default/files/2026-03/reglement_TELEVISIE.pdf) and [TV methodology 2024](https://cim.be/sites/default/files/2026-03/methodologie_television_Methodologie_NL2024.pdf) | methodology breaks (online viewing added 2020, fragments and live streams 2021, Total TV redefined 2021, 28-day window) |
-| VRT annual reports: [2015](https://www.vrt.be/nl/assets/files/2024-09/jaarverslag2015.pdf), [2016](https://www.vrt.be/nl/assets/files/2024-09/VRTJaarverslag2016.pdf), [2017](https://www.vrt.be/nl/assets/files/2024-09/LRN-VRT-Jaarverslag-2017-web-low-2.pdf), [2018](https://www.vrt.be/nl/assets/files/2024-09/VRTJaarverslag2018WEB.pdf), [2019](https://www.vrt.be/nl/assets/files/2024-09/VRT_Jaarverslag-2019-CORPS-lowlowres.pdf), [2020](https://www.vrt.be/nl/assets/files/2024-09/VRT_jaarverslag2020_A4_030_pages_Compressed.pdf), [2021](https://www.vrt.be/nl/assets/files/2024-09/Jaarverslag2021.pdf), [2022 (jaarbeeld)](https://www.vrt.be/nl/assets/files/2024-09/VRTjaarbeeld2022.pdf), [2024](https://www.vrt.be/nl/assets/files/2025-06/Jaarverslag-2024.pdf), [2025](https://www.vrt.be/nl/assets/files/2026-07/JVS_2025_0.pdf) | VRT TV share 2015–2020, channel shares 2015–2017, daily and weekly reach, VRT NU / VRT MAX figures |
+| VRT annual reports: [2015](https://www.vrt.be/nl/assets/files/2024-09/jaarverslag2015.pdf), [2016](https://www.vrt.be/nl/assets/files/2024-09/VRTJaarverslag2016.pdf), [2017](https://www.vrt.be/nl/assets/files/2024-09/LRN-VRT-Jaarverslag-2017-web-low-2.pdf), [2018](https://www.vrt.be/nl/assets/files/2024-09/VRTJaarverslag2018WEB.pdf), [2019](https://www.vrt.be/nl/assets/files/2024-09/VRT_Jaarverslag-2019-CORPS-lowlowres.pdf), [2020](https://www.vrt.be/nl/assets/files/2024-09/VRT_jaarverslag2020_A4_030_pages_Compressed.pdf), [2021](https://www.vrt.be/nl/assets/files/2024-09/Jaarverslag2021.pdf), [2022 (jaarbeeld)](https://www.vrt.be/nl/assets/files/2024-09/VRTjaarbeeld2022.pdf), [2024](https://www.vrt.be/nl/assets/files/2025-06/Jaarverslag-2024.pdf), [2025](https://www.vrt.be/nl/assets/files/2026-07/JVS_2025_0.pdf) | VRT TV share 2015–2020, channel shares 2015–2017, daily and weekly reach, VRT NU / VRT MAX figures, public funding (financing tables), management-contract results |
+| [Beheersovereenkomst VRT 2026–2030](https://www.vrt.be/nl/assets/files/2025-10/BHO_VRT_2025_digitaal-14-10-2025.pdf); VRT [financial framework](https://www.vrt.be/nl/over-ons/financien/financieel-kader) and [press release on the 2026–2030 contract](https://www.vrt.be/nl/over-ons/nieuws-over-vrt/met-een-nieuwe-beheersovereenkomst-vrt-klaar-voor-de-toekomst-vertrouwen-vernieuwing-en-ambitie-centraal) | 2026–2030 targets, reporting rules, savings, advertising ceiling |
+| [imec.digimeter 2025](https://www.imec.be/sites/default/files/2026-03/imec.digimeter-2025-rapport.pdf); [SMIT/VUB Digital News Report Flanders, policy brief 93](https://smit.research.vub.be/en/policy-brief-93-digital-news-report-2025-wider-access-weaker-pull-more-channels-less-interest-and-a) | reasons for the decline (live TV, streaming, social media, news use) |
+| [Eurostat HICP, Belgium (prc_hicp_aind)](https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_aind?geo=BE&coicop=CP00&unit=INX_A_AVG&format=JSON) | inflation adjustment (own calculation) |
+| Flemish Parliament, [hearing on the new management contract, 13 Mar 2025](https://docs.vlaamsparlement.be/files/pfile?id=2185801); Rekenhof, [audit of management contracts (2001)](https://www.ccrek.be/sites/default/files/Docs/sept_2001_beheersovereenkomsten.pdf) | transformation plan (25 M EUR saving); latest Rekenhof audit found |
 | VRM, [Mediaconcentratie in Vlaanderen 2025](https://www.vlaamseregulatormedia.be/sites/default/files/2025-12/mediaconcentratierapport_2025.pdf) (pp. 210–212) | 2024 group shares, C3 concentration 2015–2024, VRM group definitions |
 | VRT press releases: [VRT MAX 2024](https://communicatie.vrt.be/2024-het-jaar-van-een-nieuwe-groeispurt-voor-vrt-max), [annual report 2025](https://communicatie.vrt.be/vrt-bereikt-recordaantal-vlamingen-en-versnelt-digitale-groei-in-2025) | VRT MAX use 2024, weekly reach and registered users 2025 |
 | Rename announcements: [VRT NWS (Eén → VRT 1)](https://www.vrt.be/vrtnws/nl/2023/04/28/een-wordt-vanaf-vandaag-vrt-1/), [VRT (Canvas → VRT CANVAS)](https://www.vrt.be/nl/over-ons/nieuws-over-vrt/canvas-wordt-vrt-canvas), [DPG Media (Q2/Vitaya/CAZ → VTM 2/3/4)](https://communicatie.dpgmedia.be/van-familiezender-naar-een-familie-van-zenders-vtm-breidt-vanaf-het-najaar-uit-met-vtm-2-vtm-3-en-vtm-4), [Telenet (Play4 → PLAY etc.)](https://www2.telenet.be/residential/nl/klantenservice/tv-en-entertainment/zenders/zenderaanpassingen.html) | dates of the channel renames |
@@ -45,6 +50,7 @@ Every number in this repository is either copied from a named source (with its U
 |---|---|
 | [VRT annual report 2023, copy hosted by Mediaspecs](https://www.mediaspecs.be/wp-content/uploads/2024/06/vrt-jaarverslag-2023.pdf) | 2022–2023 reach, VRT MAX weekly reach, registered profiles (no copy found on vrt.be) |
 | [VRT NWS / Belga, 12 Feb 2018](https://www.vrt.be/vrtnws/nl/2018/02/12/deze-programma-s-haalden-in-2017-de-hoogste-kijkcijfers/) | most-watched programme of 2017 (CIM figures) |
+| [VRT NWS, 30 Sep 2026](https://www.vrt.be/vrtnws/nl/2026/09/30/vrt-moet-10-miljoen-euro-extra-besparen-vrt-max-mag-betalend-lu/) | extra savings announced for 2027–2029 |
 | [Sporza, 1 Aug 2016](https://sporza.be/nl/2016/08/01/ek-match-hongarije-belgie-levert-kijkcijferrecord-op-1-2727087/) | 2016 record (CIM-corrected Euro 2016 figures) |
 | [Mediaspecs, 28 Jan 2021](https://www.mediaspecs.be/vier-vijf-en-zes-worden-play4-play5-en-play6-vanaf-2-april-nieuwe-vrouwenzender-play7/) | VIER/VIJF/ZES → Play4/5/6 rename date (reprints the press release) |
 
@@ -245,6 +251,46 @@ Market share is a share of total viewing time. It is shown here for completeness
 
 ![VRT NU / VRT MAX](charts/vrt_digital.png)
 
+### Reasons for the decline (sourced)
+
+This report does not measure how much each factor contributes. The list below only gives the factors that the sources themselves name or measure. All figures and links are in [`data/decline_drivers_sourced.csv`](data/decline_drivers_sourced.csv).
+
+* **Less live TV, especially among younger adults.** 40% of Flemings (18+) watch live TV daily in 2025, against 56% in 2020. Among 25–34-year-olds it is 14%, and among 18–24-year-olds 17%. Among 55–64-year-olds it is 51%, among 65–74-year-olds 65% and among those 75+ 71% ([imec.digimeter 2025](https://www.imec.be/sites/default/files/2026-03/imec.digimeter-2025-rapport.pdf), p. 23).
+* **Viewing moves to delayed and online viewing,** which counts only partly or later in the daily ratings. 37% watch delayed TV daily (+5 points in a year; Digimeter p. 23). CIM gives 71% live / 29% delayed for all TV in 2025, while VRT reported 87.7% live for its own channels in 2017 (different bases; see *Limitations*).
+* **Cord-cutting and streaming.** 26% of Flemings have no cable TV subscription (15% never had one, 11% cancelled it). 59% have access to at least one paid streaming service (Digimeter pp. 23, 25).
+* **News and video on social media and search.** 44% follow news via social media daily, close to national TV news (51%, −2 points). 33% follow news via search engines daily (+11 points; Digimeter p. 39). The Digital News Report Flanders shows a fall in TV evening-news use from 73% (2017) to 51% (2026), and among 18–24-year-olds a rise of social media as the main news source from 23% to 43% ([SMIT/VUB policy brief 93](https://smit.research.vub.be/en/policy-brief-93-digital-news-report-2025-wider-access-weaker-pull-more-channels-less-interest-and-a)).
+* **More channels.** CIM's yearly table lists 51 channels in 2024 against 39 in 2023. The share of listed channels outside VRT, DPG and Play rose from 9.2% (2018) to 13.1% (2025) (own sum, CIM).
+* **Measurement changes** affect the series in both directions (online viewing added in 2020, consolidated daily figures from July 2023; see *Methodology breaks*). They are not a cause of a real decline, but they change what is counted.
+* **VRT's own explanation.** VRT's 2019 report links the fall in viewing time per viewer (3:56 → 3:44, 2015–2019) to "het algemene, veranderende mediagedrag" (the general change in media use).
+* **Savings and strategy.** VRT had to save under several rounds: dotation cuts in 2015 (VRT 2015 report), a transformation plan with a structural saving of 25 M EUR in the 2021–2025 contract, reported as completed by VRT's CEO in the [Flemish Parliament (13 Mar 2025)](https://docs.vlaamsparlement.be/files/pfile?id=2185801), cost control rising to 16 M EUR by 2030 in the 2026–2030 contract ([VRT](https://www.vrt.be/nl/over-ons/nieuws-over-vrt/met-een-nieuwe-beheersovereenkomst-vrt-klaar-voor-de-toekomst-vertrouwen-vernieuwing-en-ambitie-centraal)), and an extra 3.4 M EUR dotation cut in 2027, rising to 7 M EUR by 2029, announced in Sep 2026 ([VRT NWS, 30 Sep 2026](https://www.vrt.be/vrtnws/nl/2026/09/30/vrt-moet-10-miljoen-euro-extra-besparen-vrt-max-mag-betalend-lu/)). At the same time VRT's strategy is "digital first" (VRT MAX registered users 1.54 M → 4.41 M, 2018–2025). No source was found that quantifies the effect of the savings or of the digital strategy on TV audiences: **not found**.
+
+### Public funding vs results
+
+**Funding.** VRT's public funding (pillar 1 "Overheidsfinanciering" in the financing tables of the annual reports) was **277.1 M EUR in 2015, 273.4 M EUR in 2021 and 319.4 M EUR in 2025** (+15.3% nominal). The 2025 figure includes 20.0 M EUR of extra policy funds. The 2017 figure (286.6 M EUR) includes a one-off dotation for the pension fund and was restated as 268.3 M EUR a year later. **In 2025 prices** (own calculation with the Eurostat HICP for Belgium; the Statbel CPI website could not be accessed) the funding fell from **375 M EUR (2015) to 319 M EUR (2025), or −15%**. VRT itself reports public funding of **43.0 EUR per inhabitant of Flanders in 2015** and **44.58 EUR in 2025** (lowest: 37.95 EUR in 2020). The 2026 dotation: **not found** (no 2026 annual report yet). Data: [`data/public_funding.csv`](data/public_funding.csv) and [`data/public_funding_real_and_per_person_owncalc.csv`](data/public_funding_real_and_per_person_owncalc.csv).
+
+**Funding per person reached (own calculation).** Pillar 1 divided by the number of Flemings VRT TV reaches on an average day: **99 EUR (2015), 106 EUR (2021) and 130 EUR (2024)** per person per year in nominal terms. In 2025 prices it is roughly flat (134 → 128 → 134 EUR). This is only indicative: the funding also pays for radio, online and everything else VRT does, and the reach basis changes in 2023.
+
+![Public funding vs results](charts/public_funding_vs_results.png)
+
+**Targets in the management contracts and whether they were met (as reported by VRT).** Data: [`data/management_contract_kpis.csv`](data/management_contract_kpis.csv).
+
+| Target | 2016–2020 contract | 2021–2025 contract | Result |
+|---|---|---|---|
+| Weekly reach, all VRT services ≥ 85% (and ≥ 75% of each group) | 90.7% (2016) … 90.2% (2020) | KPI 9: 92.4% (2021) … 90.6% (2025) | **met every year** |
+| Weekly reach of the news offer / VRT NWS ≥ 75% | 81.0% (2016), 77.5% (2017) … 82.6% (2020) | KPI 19: 87.0% (2021) … 83.2% (2025); 16–24: 80.8% … 86.7% (aim ≥ 65%) | **met every year** |
+| Trust in VRT news (no numeric target until 2026) | TV 76% (2016), 73% (2019), 75.4% (2020) | KPI 20: TV 73% (2021) … 75% (2025); vrtnws.be 66% … 71% | stable; 2017–2018 not found on a comparable question |
+| Registered users active per month ≥ 50% | – | KPI 18: 39.0% (2021) … 49.4% (2024), 47.9% (2025) | **not met** in any year |
+| Appreciation of Eén / VRT 1 (score out of 10; reported, no target) | 8.2 (2016) … 8.2 (2020) | 8.1 (2021); 2022–2025 not found | stable where reported |
+| Balanced portrayal (diversity) | – | KPI 10 | not met in 2025 for women and for people with a disability |
+| Market share or viewer numbers | not found | not found | **no such target** in the KPI lists checked |
+
+* **No market-share target.** None of the three contracts (2016–2020, 2021–2025, 2026–2030) sets a target for TV market share or for programme audiences, as far as the KPI lists show. Their reach targets count anyone who used a VRT service at least once in a week, on any platform. That is why VRT can meet its reach targets every year while its biggest TV programmes draw fewer viewers (see *Absolute numbers*).
+* **2026–2030 contract** ([PDF](https://www.vrt.be/nl/assets/files/2025-10/BHO_VRT_2025_digitaal-14-10-2025.pdf)): trust in VRT ≥ 70% (KPI 1), trust in VRT NWS ≥ 70% (KPI 11), weekly reach ≥ 85% (KPI 25), daily reach ≥ 70% (KPI 26), VRT NWS weekly reach ≥ 75% (KPI 14), at least one programme a year aiming at ≥ 1 million media users (KPI 24). First results are due by 1 June 2027.
+* **How performance is measured.** VRT reports to the Flemish Government each year before 1 June. The government's delegate and the regulator VRM each write their own report. VRM and VRT set the measurement systems together, and VRM can do its own checks. Reach comes from VRT's own "totaalbereik" survey. The Rekenhof (Court of Audit) can check the reliability of the data and measurement systems. A Rekenhof audit of VRT's performance in 2015–2026: **not found**. The latest Rekenhof audit of the management contracts found dates from [2001](https://www.ccrek.be/sites/default/files/Docs/sept_2001_beheersovereenkomsten.pdf).
+* **News costs.** These are covered in the [companion Journaal report](https://github.com/STP-KAS/vrt-nws-journaal-10yr-report).
+
+![Management-contract indicators vs targets](charts/management_contract_kpis.png)
+
 ## Other
 
 **Data gaps**
@@ -258,6 +304,7 @@ Market share is a share of total viewing time. It is shown here for completeness
 * **VRT daily reach 2022 and 2025: not found.** The 2022 "jaarbeeld" is a magazine without the usual table, and no daily-reach figures were found in the 2025 report. Radio and online for 2015 were not found either.
 * **VRT MAX use after 2021:** VRT stopped publishing yearly video starts on the VRT NU basis. The 2024 figure (284 million starts) includes podcasts and other content and is not comparable. VRT MAX monthly users are only given as "about 1.5 million" (Nov 2024).
 * **DPG and Play group totals before 2018** come from fewer channels (CAZ and Zes are missing in 2015), so they are slightly understated.
+* **Funding:** the 2026 dotation, VRT's funding per inhabitant for 2022 and a Rekenhof performance audit for 2015–2026 were **not found**. The Statbel CPI website could not be accessed, so the Eurostat HICP for Belgium is used for real terms. Comparable trust figures for 2017–2018 and appreciation scores ('waardering') after 2021 were not found.
 * **The VRT annual report 2023** was only found as a copy on Mediaspecs (secondary host).
 * **The DPG Media and Play Media annual reports** were not used. They report Belgium-wide or North figures with their own definitions (e.g. the [DPG Media annual report 2024](https://jaarverslag.demorgen.be/2024-nl/dpg_media_in_2024) states 36.4% "marktaandeel televisie", North, for 2024), which do not match the CIM 4+ full-day figure used here.
 
@@ -301,12 +348,18 @@ Market share is a share of total viewing time. It is shown here for completeness
 | `data/cim_daily_vs_yearly_ratio_by_month_owncalc.csv` | daily vs yearly-Top-100 viewers of the same broadcast per month: evidence of the July 2023 break (own calculation) |
 | `data/cim_yearly_top100_absolute_owncalc.csv` | per group and year: biggest audience with programme, channel and date, and average of the 10 biggest (own calculation) |
 | `data/methodology_breaks.csv` | measurement changes and renames, with sources |
+| `data/public_funding.csv` | VRT public funding (pillar 1) 2015–2026, funding per inhabitant, Eurostat HICP, savings decisions, with sources |
+| `data/public_funding_real_and_per_person_owncalc.csv` | funding in 2025 prices and per person reached by VRT TV daily (own calculation) |
+| `data/management_contract_kpis.csv` | management-contract targets 2016–2020, 2021–2025, 2026–2030 and reported results |
+| `data/decline_drivers_sourced.csv` | sourced indicators behind 'Reasons for the decline' |
 | `charts/absolute_*.png` | the four absolute charts (main: `absolute_vrt_programme_audiences.png`). All time-series charts show the COVID-19 years 2020–2021 as a grey band |
+| `charts/public_funding_vs_results.png`, `charts/management_contract_kpis.png` | funding and target charts |
 | `charts/*.png` (others) | the five market-share, reach and digital charts |
 | `scripts/cimlib.py`, `scripts/build_cim_derived.py` | parse cached CIM pages and build the CIM-derived CSVs |
 | `scripts/sourced_figures_src.py` | the hand-copied figures as code, writing `data/sourced_figures.csv` and the 2015–2017 group sums |
 | `scripts/build_absolute.py` | builds the absolute CSVs from the cached CIM pages |
-| `scripts/make_charts.py`, `scripts/make_absolute_charts.py` | draw the charts |
+| `scripts/funding_kpis_src.py` | the funding, KPI and decline-driver figures as code, writing the four CSVs above |
+| `scripts/make_charts.py`, `scripts/make_absolute_charts.py`, `scripts/make_funding_charts.py` | draw the charts |
 
 **Reproduce**
 ```bash
@@ -319,6 +372,8 @@ python3 -m venv .venv && .venv/bin/pip install pandas matplotlib
 .venv/bin/python scripts/sourced_figures_src.py
 .venv/bin/python scripts/make_charts.py
 .venv/bin/python scripts/make_absolute_charts.py
+.venv/bin/python scripts/funding_kpis_src.py
+.venv/bin/python scripts/make_funding_charts.py
 ```
 
 **Data and reuse note**
